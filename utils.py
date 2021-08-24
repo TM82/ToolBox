@@ -1,3 +1,4 @@
+import configparser
 import os
 import time
 import json
@@ -5,7 +6,9 @@ import logging
 import requests
 from contextlib import contextmanager
 
-SLACK_URL = os.getenv("SLACK_URL", "")
+config = configparser.ConfigParser()
+config.read('/kiban/t-miura/venv3.9.5/Projects/settings/config.ini',encoding='utf-8')
+SLACK_URL = config.get('settings','SLACK_URL')
 
 # # プロキシの設定
 # proxies = {
