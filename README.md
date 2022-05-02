@@ -3,13 +3,24 @@
 - contextmanagerを用いて，実験ログを保存するためのライブラリ
 - logファイルへの保存だけでなく，slackへの通知も可能
 
+# How to import
+```
+git clone https://github.com/TM82/ToolBox.git
+cd ToolBox
+pip install .
+```
+or
+```
+pip install git+https://github.com/TM82/ToolBox.git
+```
+
 # How to use
 
 1. 環境変数に `export SLACK_URL=<Slack AppのチャンネルURL>`を追加
   - 該当するSlack Appにメッセージ投稿権限を与えること
 2. コード例
 ```
-from ToolBox.utils import start_logging,timer,do_job
+from ToolBox import start_logging,timer,do_job
 
 LOGGER = start_logging(filename=WORK_DIR+"log/0_sample.log")
 
