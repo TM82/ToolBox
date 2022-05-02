@@ -5,13 +5,13 @@
 
 # How to import
 ```
-git clone https://github.com/TM82/ToolBox.git
+git clone git@github.com:TM82/ToolBox.git
 cd ToolBox
 pip install .
 ```
 or
 ```
-pip install git+https://github.com/TM82/ToolBox.git
+pip install git+ssh://git@github.com:TM82/ToolBox.git
 ```
 
 # How to use
